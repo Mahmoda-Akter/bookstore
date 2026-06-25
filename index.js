@@ -336,11 +336,7 @@ async function run() {
         // review section
         // app.post('/review', async (req, res) => {
         //     const reviewdata = req.body
-        //     console.log(reviewdata)
-        //     const result = await reviewsection.insertOne(reviewdata)
-
-        //     res.json(result)
-        // })
+        
 
         app.post('/review', async (req, res) => {
             const { bookId, userId, rating, comment } = req.body;
