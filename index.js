@@ -71,7 +71,7 @@ const verifyAdmin = (req, res, next) => {
 async function run() {
     try {
         // Connect the client to the server	(optional starting in v4.7)
-        await client.connect();
+        // await client.connect();
         const db = client.db("webapp")
         const bookcolloection = db.collection('books')
         const subscriptioncollection = db.collection('subscription')
@@ -126,26 +126,6 @@ async function run() {
             res.json(result)
         })
 
-        // app.get('/books', async (req, res) => {
-        //     const page = parseInt(req.query.page) || 1;
-        //     const limit = parseInt(req.query.limit) || 6;
-
-        //     const skip = (page - 1) * limit;
-        //     const result = await bookcolloection
-        //         .find({
-        //             // status: "Approved",
-        //             publishStatus: "Published"
-        //         })
-        //         .toArray();
-
-        //     const books = await bookcolloection
-        //         .find(query)
-        //         .skip(skip)
-        //         .limit(limit)
-        //         .toArray();
-
-        //     res.json(result);
-        // });
 
         app.get('/books', async (req, res) => {
             const page = parseInt(req.query.page) || 1;
@@ -220,7 +200,7 @@ async function run() {
                 .limit(limit)
                 .toArray();
 
-            // Search by Book Name
+           
 
 
 
