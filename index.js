@@ -236,15 +236,15 @@ async function run() {
             res.json(result);
         });
 
-        app.delete('/seller/books/:id', async (req, res) => {
-            const { id } = req.params;
+        // app.delete('/seller/books/:id', async (req, res) => {
+        //     const { id } = req.params;
 
-            const result = await bookcolloection.deleteOne({
-                _id: new ObjectId(id)
-            });
+        //     const result = await bookcolloection.deleteOne({
+        //         _id: new ObjectId(id)
+        //     });
 
-            res.json(result);
-        });
+        //     res.json(result);
+        // });
 
         app.patch('/seller/books/publish-status/:id', async (req, res) => {
             const { id } = req.params;
